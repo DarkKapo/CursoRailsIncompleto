@@ -1,0 +1,43 @@
+<h1 class="text-center">Formulario</h1>
+
+<div class="container">
+    <table class="table table-bordered border-info">
+        <thead>
+            <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+            <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @posts.each do |post| %>
+                <tr class="text-center">
+                    <th class="align-middle"><%= post.id %></th>
+                    <td class="align-middle"><%= post.title %></td>
+                    <td class="align-middle"><%= post.content %></td>
+                    <td class="align-middle"><img src="<%=post.image_url%>" alt="" style="width: 75px; height: 60px;"></td>
+                </tr>
+            <%end%>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <form method="get" action="<%= posts_create_path %>" id="create_posts">
+        <div class="row mx-5">
+            <div class="col">
+                <input type="text" class="form-control border border-warning" placeholder="Title" name="title">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control border border-warning" placeholder="Content" name="content">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control border border-warning" placeholder="Image_URL" name="image_url">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-outline-primary">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>

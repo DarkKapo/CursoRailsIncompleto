@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirstApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><%= link_to "one", pages_one_path %></li>
+        <li><%= link_to "two", pages_two_path %></li>
+        <li><%= link_to "three", pages_three_path %></li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

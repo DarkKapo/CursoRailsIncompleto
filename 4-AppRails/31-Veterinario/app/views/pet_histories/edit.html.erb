@@ -1,0 +1,8 @@
+<h1>Editing Pet History</h1>
+
+<%= render 'form', pet_history: @pet_history %>
+
+<%= link_to 'Show', pet_pet_history_path(@pet, @pet_history) %> |
+<%= link_to 'Histories', pet_pet_histories_path %>
+<%= link_to 'Back', :back %> |
+<%= link_to 'Index', root_path %>

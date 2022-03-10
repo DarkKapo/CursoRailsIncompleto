@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Barra de búsqueda</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="state">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>State</th>
+        <th>Description</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+    <% @projects.each do |project| %>
+        <tr>
+            <td><%= project.name %></td>
+            <td><%= project.state %></td>
+            <td><%= project.description %></td>
+            <td><%= project.start %></td>
+            <td><%= project.end %></td>
+        </tr>
+    <% end %>
+</table>
+
+<%= link_to "Inicio", root_path %>

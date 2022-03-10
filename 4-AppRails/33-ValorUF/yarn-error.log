@@ -1,0 +1,37 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add --dev webpack-dev-server
+
+PATH: 
+  /home/rodrigo/.rvm/gems/ruby-2.6.6/bin:/home/rodrigo/.rvm/gems/ruby-2.6.6@global/bin:/home/rodrigo/.rvm/rubies/ruby-2.6.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/rodrigo/.rvm/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  10.24.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com registry.yarnpkg.com:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+npm manifest: 
+  {
+    "name": "proyect-api",
+    "private": true,
+    "dependencies": {
+      "@rails/ujs": "^6.0.0",
+      "turbolinks": "^5.2.0",
+      "@rails/activestorage": "^6.0.0",
+      "@rails/actioncable": "^6.0.0"
+    },
+    "version": "0.1.0"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,14 @@
+<% if @post.errors.any? %>
+    <div id="card border-0">
+        <h1>We have <%= pluralize(@post.errors.count, "error") %></h1>
+        <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+            <li class="text-danger"><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+<% else %>
+    <h1 class="text-center">Registro exitoso</h1>
+<% end %>
+
+<%= link_to "Volver", root_path%>
